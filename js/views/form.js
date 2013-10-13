@@ -4,6 +4,7 @@ define(['marionette','text!templates/form.html'], function (Marionette,$form){
 
 	Form.View = Marionette.ItemView.extend({
 		template: $form,
+		tagName:'li',
 		events:{
 			'click button':'createNewUser'
 		},
