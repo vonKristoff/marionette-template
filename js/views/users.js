@@ -1,9 +1,9 @@
-define(['marionette'], function (Marionette){
+define(['marionette','text!templates/user.html','Handlebars'], function (Marionette,tmpl,Handlebars){
 
 	var Users = {};
 
 	Users.Single = Marionette.ItemView.extend({
-		template: '#userView'
+		template: Handlebars.compile( $(tmpl).html() )
 	});
 	Users.NoUserView = Marionette.ItemView.extend({
 		template: '#noUsersView'

@@ -1,9 +1,9 @@
-define(['marionette'], function (Marionette){
+define(['marionette','text!templates/form.html'], function (Marionette,$form){
 
 	var Form = {};
 
 	Form.View = Marionette.ItemView.extend({
-		template: '#formView',
+		template: $form,
 		events:{
 			'click button':'createNewUser'
 		},
